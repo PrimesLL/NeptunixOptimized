@@ -12,27 +12,27 @@ mkdir -p "/home/container/plugins/spark"
 cd "$plugins_dir"
 
 echo "Установка HibernateX.jar..."
-curl -s -L -o "HibernateX.jar" "https://github.com/mafik38/asura-optimized-egg/raw/main/HibernateX.jar" > /dev/null
+curl -s -L -o "HibernateX.jar" "https://github.com/PrimesLL/PaperOptimized/raw/main/HibernateX.jar" > /dev/null
 if [ -f "HibernateX.jar" ]; then
     echo "HibernateX.jar успешно установился."
 else
     echo "Неуспешно установился HibernateX.jar."
 fi
 
-echo "Установка Spark.jar..."
-curl -s -L -o "Spark.jar" "https://github.com/mafik38/asura-optimized-egg/raw/main/Spark.jar" > /dev/null
-if [ -f "Spark.jar" ]; then
-    echo "Spark.jar успешно установился."
+echo "Установка spark-1.10.66-bukkit.jar..."
+curl -s -L -o "spark-1.10.66-bukkit.jar" "https://github.com/PrimesLL/PaperOptimized/raw/main/spark-1.10.66-bukkit.jar" > /dev/null
+if [ -f "spark-1.10.66-bukkit.jar" ]; then
+    echo "spark-1.10.66-bukkit.jar успешно установился."
     cd /home/container/plugins/spark
-    curl -s -L -o "config.json" "https://github.com/mafik38/asura-optimized-egg/raw/main/sparkconfig.json"
+    curl -s -L -o "config.json" "https://github.com/PrimesLL/PaperOptimized/raw/main/sparkconfig.json"
     echo "Исправлена конфигурация."
 else
-    echo "Неуспешно установился Spark.jar."
+    echo "Неуспешно установился spark-1.10.66-bukkit.jar."
 fi
 
 echo "Установка LagFixer.jar..."
 cd /home/container/plugins
-curl -s -L -o "LagFixer.jar" "https://github.com/mafik38/asura-optimized-egg/raw/main/LagFixer.jar" > /dev/null
+curl -s -L -o "LagFixer.jar" "https://github.com/PrimesLL/PaperOptimized/raw/main/LagFixer.jar" > /dev/null
 if [ -f "LagFixer.jar" ]; then
     echo "LagFixer.jar успешно установился."
 else
@@ -42,7 +42,7 @@ fi
 cd ..
 
 echo "Согласие с eula (https://www.minecraft.net/en-us/eula)"
-curl -s -L -o "eula.txt" "https://github.com/mafik38/asura-optimized-egg/raw/main/eula.txt" > /dev/null
+curl -s -L -o "eula.txt" "https://github.com/PrimesLL/PaperOptimized/raw/main/eula.txt" > /dev/null
 if [ -f "eula.txt" ]; then
     echo "Успешно подтверждена eula."
 else
